@@ -61,6 +61,60 @@ content="Página oficial de MouseControl / HACKAIM">
 
 
     /* ================================
+       BOTÓN ADQUIRIR LICENCIA
+    ================================ */
+
+    .license-scroll-button {
+        display: flex;
+        width: 100%;
+        max-width: 420px;
+        min-height: 52px;
+        margin: 24px auto 0;
+
+        align-items: center;
+        justify-content: center;
+
+        box-sizing: border-box;
+
+        text-decoration: none;
+
+        font-size: 13px;
+        font-weight: 900;
+        letter-spacing: 0.8px;
+
+        border-radius: 13px;
+
+        transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease,
+            filter 0.2s ease;
+    }
+
+    .license-scroll-button:hover {
+        transform: translateY(-2px);
+        filter: brightness(1.08);
+
+        box-shadow:
+            0 16px 38px rgba(151, 73, 224, 0.38),
+            0 0 28px rgba(190, 115, 255, 0.18),
+            inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    }
+
+    .license-scroll-button:active {
+        transform: translateY(0);
+    }
+
+
+    /* ================================
+       SECCIÓN PRECIOS
+    ================================ */
+
+    #precios {
+        scroll-margin-top: 110px;
+    }
+
+
+    /* ================================
        BOTÓN SOPORTE CENTRADO
     ================================ */
 
@@ -1101,6 +1155,11 @@ content="Página oficial de MouseControl / HACKAIM">
             text-align: center;
         }
 
+        .license-scroll-button {
+            max-width: 100%;
+            min-height: 50px;
+        }
+
     }
 
 </style>
@@ -1265,6 +1324,18 @@ content="Página oficial de MouseControl / HACKAIM">
                     </div>
 
                 </div>
+
+
+                <!-- =====================================
+                     BOTÓN ADQUIRIR LICENCIA
+                ====================================== -->
+
+                <a
+                    href="#precios"
+                    class="button primary license-scroll-button"
+                    id="licenseScrollButton">
+                    💳 ADQUIRIR LICENCIA
+                </a>
 
             </div>
 
@@ -2950,6 +3021,7 @@ content="Página oficial de MouseControl / HACKAIM">
             'a[href="#trabajar-con-nosotros"]'
         );
 
+
     if (workWithUsLink) {
 
         workWithUsLink.addEventListener(
@@ -2966,6 +3038,44 @@ content="Página oficial de MouseControl / HACKAIM">
                 if (section) {
 
                     section.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start"
+                    });
+
+                }
+
+            }
+        );
+
+    }
+
+
+    /* ================================
+       DESLIZAR A ELEGÍ TU PLAN
+    ================================ */
+
+    const licenseScrollButton =
+        document.getElementById(
+            "licenseScrollButton"
+        );
+
+
+    if (licenseScrollButton) {
+
+        licenseScrollButton.addEventListener(
+            "click",
+            function(event) {
+
+                event.preventDefault();
+
+                const pricingSection =
+                    document.getElementById(
+                        "precios"
+                    );
+
+                if (pricingSection) {
+
+                    pricingSection.scrollIntoView({
                         behavior: "smooth",
                         block: "start"
                     });
