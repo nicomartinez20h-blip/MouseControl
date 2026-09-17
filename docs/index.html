@@ -28,8 +28,8 @@
 <title>MouseControl / HACKAIM</title>
 
 <meta
-name="description"
-content="Página oficial de MouseControl / HACKAIM">
+    name="description"
+    content="Página oficial de MouseControl / HACKAIM">
 
 <link rel="stylesheet" href="style.css">
 
@@ -1015,6 +1015,15 @@ content="Página oficial de MouseControl / HACKAIM">
        RESPONSIVE
     ================================ */
 
+    @media (max-width: 1000px) {
+
+        .download-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+    }
+
+
     @media (max-width: 1050px) {
 
         .weapon-grid {
@@ -1039,6 +1048,10 @@ content="Página oficial de MouseControl / HACKAIM">
 
 
     @media (max-width: 650px) {
+
+        .download-grid {
+            grid-template-columns: 1fr;
+        }
 
         .complaint-modal {
             padding: 12px;
@@ -1669,11 +1682,11 @@ content="Página oficial de MouseControl / HACKAIM">
                 data-weapon="MK35 ISR"
                 data-vertical="-75"
                 data-horizontal="-7"
-                data-image="https://callofduty.fandom.com/wiki/Special:Redirect/file/MK35%20ISR%20Gunsmith%20BO7.png">
+                data-image="https://callofduty.fandom.com/wiki/Special:Redirect/file/MK35%20Gunsmith%20BO7.png">
 
                 <img
                     class="weapon-image"
-                    src="https://callofduty.fandom.com/wiki/Special:Redirect/file/MK35%20ISR%20Gunsmith%20BO7.png"
+                    src="https://callofduty.fandom.com/wiki/Special:Redirect/file/MK35%20Gunsmith%20BO7.png"
                     alt="MK35 ISR"
                     loading="lazy">
 
